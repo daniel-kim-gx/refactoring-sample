@@ -7,6 +7,7 @@ import Counter from "./pages/Counter";
 import Main from "./pages/Main";
 import SnapshotTesting from "./pages/SnapshotTesting";
 import ComponentStructure from "./pages/ComponentStructure";
+import Redux from "./pages/Redux";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Dashboard path="/dashboard" />
         <SnapshotTesting path="/snapshot-testing" />
         <ComponentStructure path="/component-structure" />
+        <Redux path="/redux" />
       </Router>
     </>
   );
