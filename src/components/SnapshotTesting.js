@@ -3,7 +3,7 @@ import Bolder from "../base/Bolder";
 function SnapshotTesting({ list, object }) {
   return (
     <div>
-      THIS component is for snapshot testing.
+      That component is for snapshot testing.
       <Child1 list={list} />
       <Child2 object={object} />
     </div>

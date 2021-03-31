@@ -32,7 +32,6 @@ const mockProps = {
 describe("<SnapshotTesting />", () => {
   it("Should match snapshot", () => {
     const { container } = render(<SnapshotTesting {...mockProps} />);
-
     expect(container.firstChild).toMatchSnapshot();
   });
 });

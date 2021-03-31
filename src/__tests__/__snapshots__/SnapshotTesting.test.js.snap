@@ -2,7 +2,7 @@
 
 exports[`<SnapshotTesting /> Should match snapshot 1`] = `
 <div>
-  THIS component is for snapshot testing.
+  That component is for snapshot testing.
   <div>
     This is child one.
     <ul>
