@@ -17,7 +17,7 @@ const Header = () => {
         & a {
           margin-right: 1rem;
           color: white;
-          text-decoration: none;
+          text-decoration: underline;
           font-weight: bold;
           font-size: 1.4rem;
 
@@ -31,6 +31,7 @@ const Header = () => {
       <Link to="/counter">counter</Link>
       <Link to="/dashboard">dashboard</Link>
       <Link to="/snapshot-testing">snapshot testing</Link>
+      <Link to="/component-structure">component structure</Link>
     </div>
   );
 };
