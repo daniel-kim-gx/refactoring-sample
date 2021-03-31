@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SnapshotTesting /> Should match snapshot 1`] = `
+<div>
+  THIS component is for snapshot testing.
+  <div>
+    This is child one.
+    <ul>
+      <li>
+        <b>
+          Title is : 
+          test-title-1
+        </b>
+      </li>
+      <li>
+        <b>
+          Title is : 
+          test-title-2
+        </b>
+      </li>
+      <li>
+        <b>
+          Title is : 
+          test-title-3
+        </b>
+      </li>
+    </ul>
+    <div>
+      List's length is : 
+      3
+    </div>
+  </div>
+  <div>
+    This is child two.
+    <div>
+      <b>
+        My name is: 
+        <strong>
+          test-name
+        </strong>
+      </b>
+    </div>
+    <div>
+      My age is: 
+      <strong>
+        400
+      </strong>
+    </div>
+    <div>
+      My address is: 
+      <strong>
+        test-address
+      </strong>
+    </div>
+  </div>
+</div>
+`;
