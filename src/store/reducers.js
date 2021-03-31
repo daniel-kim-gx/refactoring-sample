@@ -6,6 +6,7 @@ const initialState = {
   value: 0,
   isLoading: false,
   error: null,
+  account: null,
 };
 
 const counterSlice = createSlice({
@@ -22,11 +23,25 @@ const counterSlice = createSlice({
     asyncRequest(state) {
       state.isLoading = true;
     },
+
     asyncSuccess(state, action) {
       state.isLoading = false;
       state.value = action.payload;
     },
     asyncFail(state, action) {
+      state.error = action.payload;
+    },
+
+    requestAccount(state) {
+      state.account = null;
+      state.isLoading = true;
+    },
+
+    requestAccountSuccess(state, action) {
+      state.isLoading = false;
+      state.account = action.payload;
+    },
+    requestAccountFail(state, action) {
       state.error = action.payload;
     },
   },
@@ -38,6 +53,9 @@ export const {
   asyncRequest,
   asyncFail,
   asyncSuccess,
+  requestAccount,
+  requestAccountSuccess,
+  requestAccountFail,
 } = counterSlice.actions;
 
 export default counterSlice.reducer;
@@ -51,4 +69,15 @@ export function* counterSaga() {
       yield put(asyncFail(e));
     }
   });
+
+  yield takeLatest(requestAccount, function* saga(action) {
+    try {
+      const response = yield call(API.fetchAccount, action.payload);
+      yield put(requestAccountSuccess(response.data));
+    } catch (e) {
+      yield put(requestAccountFail(e));
+    }
+  });
 }
+
+export const accontSelector = (state) => state.account;
